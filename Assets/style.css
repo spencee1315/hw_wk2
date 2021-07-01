@@ -1,0 +1,289 @@
+/* color scheme sourced from http://khroma.co/generator/ */
+:root {
+  --outer-space: #690F47;
+  --bright-turqoise: #e0eae4;
+  --gin: #CED1DB;
+  --heliotrope: #B2CCA6;
+}
+
+  /* set content highlight color and background */
+::selection {
+  background-color: var(--bright-turquoise);
+  color: var(--outer-space);
+}
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+  display: block;
+}
+
+/* *, *::before, *::after {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+*/
+
+
+/* head {
+      display: none;
+} */
+
+body {
+  /* Sans Serif font stack is implemented to help select the best font for each type of computer operating system */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', Arial, Helvetica, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-size: 1.75rem;
+  line-height: 1.5;
+  color: var(--gin);
+  background-color: var(--outer-space);
+  min-height: 100%;
+  display: block;
+  margin: 8px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.625rem;
+  color: var(--heliotrope);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: 4em;
+}
+
+h2 {
+  font-size: 3.5rem;
+}
+  
+h3 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 2.5rem;
+}
+  
+h5 {
+  font-size: 2rem;
+}
+  
+h6 {
+  font-size: 1.5rem;
+}
+
+p {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  text-align: justify;
+
+}
+
+.picture-disc {
+  color: var(--bright-turqoise);
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+header {
+  width: 500px;
+  margin: 0 auto;
+  padding: 5rem;
+  text-align: center;
+}
+
+header h1.page-title {
+  margin-left: 22.5%;
+  padding: 0rem 1.2rem;
+  font-size: 4.5rem;
+}
+
+header h2 {
+  justify-content: center;
+  color: var(--gin);
+  outline: 2px dashed var(--heliotrope);
+  width: 38%;
+  text-align: center;
+  margin-left: 30%;
+  margin-bottom: 3rem;
+}
+
+header img {
+  width: 25%;  
+  height: 25%; 
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 10px 10px 5px var(--bright-turqoise);
+}
+
+main {
+  width: 100%;
+  margin: 1rem auto;
+}
+
+article {
+  width: 90%;
+  padding-bottom: 5rem;
+  text-align: justify;
+}
+
+/* Makes article area and contents increase in size when moused over */
+article:hover {
+  transform: scale(1.1);
+}
+
+aside {
+  display: flex;
+  justify-content: left;
+  width: 375px;
+  background-color: var(--heliotrope);
+  margin: 0 auto;
+  padding: 2.5rem;
+  text-align: center;
+}
+
+aside label {
+  color: var(--outer-space);
+}
+
+aside h2 {
+  color: var(--outer-space);
+  padding-right: 2rem;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 2%;
+  color: var(--gin);
+}
+
+/* Added hot coffee cup symbols before and after the second nav link */
+nav .coffee::before,
+nav .coffee::after {
+  content: '\2615';
+  color: var(--gin);
+  padding: .5rem;
+  font-family: cursive;
+}
+
+nav ul {
+  display: block;
+  justify-content: space-between;
+  min-width: 25%;
+  float: right;
+}
+
+nav a {
+  color: var(--gin);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Links will change color when hovered over */
+nav a:hover {
+  color: var(--heliotrope);
+}
+
+/* create our main grid with flexbox, use negative margins to offset the padding on the .card-column class */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+/* using a mobile-first approach, set base column width to be 100% and we'll update it using media queries for larger screen sizes */
+.card-column {
+  flex: 1 0 100%;
+  padding: 1.5rem;
+  /* when the screen resizes, make it so our columns don't jump in size */
+  transition: flex-basis 500ms linear;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* make each code card a flexbox column to align and justify content within it */
+.code-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 50%;
+  padding: 2rem;
+  color: var(--heliotrope);
+
+  /* outline is like border, but on the outside of the box instead of inside */
+  outline: 2px dashed var(--gin);
+  outline-offset: -2px;
+  transition: all 0.5s ease-in-out;
+}
+
+.code-card .card-header {
+  /* use position and negative margins to move title of card over the card's outline and create an overlap effect */
+  position: relative;
+  margin: -4rem 0 1.5rem 0;
+  padding: 0.5rem 1rem;
+  background-color: var(--outer-space);
+  color: var(--heliotrope);
+  border: 2px solid var(--gin);
+  border-radius: 8px;
+  transition: all 0.5s ease-in-out;
+}
+
+/* Image fills space completely, has rounded edges */
+.code-card .card-image {
+  width: 100%;  
+  height: 100%; 
+  object-fit: fill;
+  border-radius: 5%;
+}
+
+/* makes cards increase in size when moused over */
+.code-card:hover {
+  transform: scale(1.1);
+}
+
+/* set an outer and inner drop shadow on the card to create a glowing effect on hover */
+.code-card:hover,
+.code-card:hover .card-header {
+  box-shadow: inset 0px 0px 8px var(--heliotrope), 0 0 15px var(--heliotrope);
+}
+
+/* each card's code block grows to the height of the largest code block on the page, making each card even in height */
+.code-card .code-block {
+  flex-grow: 1;
+}
+  
+input,
+button {
+  width: 100%;
+  margin: 2% 0;
+  padding: 1%;
+}
+
+/* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
+@media screen and (min-width: 768px) {
+  /* on tablets, set columns to only be 50% of the width and not grow */
+  .card-column {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+/* media query for larger screens */
+@media screen and (min-width: 992px) {
+  header {
+    width: 75%;
+  }
+
+  .card-column {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+  }
+}

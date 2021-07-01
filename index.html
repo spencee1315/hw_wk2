@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>UW Bootcamp, HW 2: Advanced CSS</title>
+    <link rel="stylesheet" href="Assets/reset.css" />
+    <link rel="stylesheet" href="Assets/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#about-me">About</a></li>
+          <li class="coffee"><a href="#coffee">Coffee</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h1 class="page-title">Elliott Spencer</h1>
+        <h2>My Portfolio In Progress</h2>
+        <img src="Images/IMG_2334.jpeg" alt="A picture of me" class="my-picture"> 
+      </div>
+    </header>
+    <main>
+      <section class="row justify-center" id="about-me"> 
+        <article>
+          <h2>About Me</h2>
+          <div>
+            <p>
+              Welcome to my "Portfolio in Progress." I am a coffee professional by day, currently taking a Coding Bootcamp through the University of Washington with the intention of changing career paths. This is my second homework assignment for UW Coding Bootcamp and while I have yet to complete any personal projects to include within such a page I would love to introduce you to some of my favorite coffee shops from my hometown, Seattle.
+            </p>
+          </div>
+        </article>
+      </section>
+      <section class="row justify-center" id="coffee">
+        <div class="card-column">
+          <figure class="code-card">
+            <h2 class="card-header">Milstead & Co</h2>
+            <img src="http://milsteadandco.com/wp-content/uploads/2018/09/B0003535.jpg" alt="Milstead & Co" class="card-image">
+            <div class="card-body">
+              <p>Located in the Fremont neighboorhood, Milstead is the perfect shop to sit and study for hours upon hours. They carry coffee from a variety of world-class roasters and always have some of the best service you could ask for. They have amazing espresso drinks and are distincly unique for serving aeropress as their form of drip coffee.</p>
+            </div>
+          </figure>
+        </div>
+        <div class="card-column">
+          <figure class="code-card">
+            <h2 class="card-header">Union Coffee</h2>
+            <img src="https://i0.wp.com/southseattleemerald.com/wp-content/uploads/2020/07/IMG_20200719_133143.jpg" alt="Union Coffee" class="card-image">
+            <div class="card-body">
+              <p class="picture-disc">Geetu Vailoor - Owner</p>
+              <p>A cozy spot located in the Central District neighborhood Union Coffee has an amazing lineup of coffees from world-class roasters, and are especially focused on roasters who are ethically minded and actively making the coffee community and industry better. They also boast a wonderful selection of wine organized and operatied by Juice Club and are a true focal point of the neighborhood (in my opinion). </p>
+            </div>
+          </figure>
+        </div>
+        <div class="card-column" >
+          <figure class="code-card">
+            <h2 class="card-header">Boon Boona Coffee</h2>
+            <img src="https://www.freshcup.com/wp-content/uploads/2019/09/BoonBoona_Main1015x575-894x372.jpg" alt="Boon Boona Coffee" class="card-image">
+            <div class="card-body">
+              <p class="picture-disc">Boon Boona Coffee owner Efrem Fesaha (right) and director of coffee, Ali Gulduren. All photos by Barbara Lloyd McMichael</p>
+              <p>Translating to "Coffee Coffee Coffee" Boon Boona is an amazing coffee roaster with two cafe locations between Seattle and Renton. They are focused on sourcing and celebrating coffee from Africa and are one of the most community-focused coffee shops I know. Efrem the owner is one of the friendliest people you will ever meet, Ali, their director of coffee is supremely talented and a truly amazing person. </p>
+            </div>
+          </figure>
+        </div>
+        <div class="card-column">
+          <figure class="code-card">
+            <h2 class="card-header">Looking Homeward Coffee</h2>
+            <img src="https://images.squarespace-cdn.com/content/v1/5b0ee98a2971149a9399ec4c/1601505415293-V6ZKDX57RCD2JVBS837B/1st+anniversary+%281+of+2%29.jpg" alt="Looking Homeward Coffee" class="card-image">
+            <div class="card-body">
+              <p class="picture-disc">Jake Deome - Director of Coffee - Creative Director</p>
+              <p>A Seattle based roaster, Looking Homeward Coffee features a beautiful selection of coffee that is specially selected from around the globe and roasted to fit every coffee drinkers preferences. From Light to Medium Roasts, Dark Roasts, or Instant Coffee and incredible Tea offerings, they have quickly become one of the best roasters in the country with everything in their lineup being truly exceptional. </p>
+            </div>
+          </figure>
+        </div>
+      </section>
+      <aside id="contact">
+        <h2>Contact Me</h2>
+        <form>
+          <p>
+            <label for="username">Name:</label>
+            <!-- This element has a CSS declaration of `cursor: text` -->
+            <input id="username" type="text" placeholder="First   Last" />
+          </p>
+          <p>
+            <label  for="email">E-mail:</label>
+            <input id="email" type="text" placeholder="your@example.com" />
+          </p>
+          <p>
+            <label for="comment">Comment:</label>
+            <textarea id="comment" placeholder="Coffee questions?"></textarea>
+          </p>
+            <!-- When this element is in a :focus state, the CSS `outline` property is applied -->
+            <button>Submit</button>
+        </form>
+      </aside>
+    </main>
+    <footer>
+      <span>Thanks for visiting!</span>
+    </footer>
+  </body>
+</html>
